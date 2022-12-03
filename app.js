@@ -1,4 +1,4 @@
-const channel = "rascal_cs";
+const channel = "strylander";
 const countElement = document.getElementById("count");
 const gauge = document.querySelector(".gaugeBar");
 const emoteImg = document.getElementById("emote");
