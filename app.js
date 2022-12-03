@@ -1,4 +1,4 @@
-const channel = "strylander";
+const channel = ${{secrets.TARGET_CHANNEL}};
 const countElement = document.getElementById("count");
 const gauge = document.querySelector(".gaugeBar");
 const emoteImg = document.getElementById("emote");
