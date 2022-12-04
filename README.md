@@ -1,3 +1,4 @@
+## Emote Meter
 # A Simple Web Page that Listens for Twitch Chat emote spam
 
 * A gauge meter display that moves according to how much an emote is being typed. 
