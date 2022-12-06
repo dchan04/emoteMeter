@@ -12,7 +12,7 @@ var timer = setInterval(loop, 100);
 function loop() {
   //console.log(`${countElement.textContent}`);
   if (countElement.textContent >= 0) {
-    count = countElement.textContent - 0.25;
+    count = countElement.textContent - 0.1;
     countElement.textContent = count;
     if (count < 0) {
       count = 0;
@@ -59,10 +59,10 @@ window.onload = () => {
   client.on("message", (channel, tags, message, self) => {
     console.log(message);
     if (message.includes("KEKW")) {
-      count = parseInt(countElement.textContent) + 25;
+      count = parseInt(countElement.textContent) + 20;
       if (count > 100) {
         emoteImg.style.animation = `rotate-scale-up 1s linear 2 both`;
-        count = 100;
+        count = 0;
       }
       countElement.innerHTML = count;
       gauge.style.transform = `rotate(${count / 2 / 100}turn)`;
