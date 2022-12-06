@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "dotenv": "^16.0.3",
     "tmi.js": "^1.8.5"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "lite-server": "^2.6.1"
   },
   "scripts": {

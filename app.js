@@ -12,7 +12,7 @@ var timer = setInterval(loop, 100);
 function loop() {
   //console.log(`${countElement.textContent}`);
   if (countElement.textContent >= 0) {
-    count = countElement.textContent - 1;
+    count = countElement.textContent - 0.25;
     countElement.textContent = count;
     if (count < 0) {
       count = 0;
