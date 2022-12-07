@@ -18,17 +18,17 @@ function loop() {
       count = 0;
     } else if (count < 25) {
       console.log("TEST1");
-      gauge.style.backgroundColor = "#d2222d";
+      gauge.style.backgroundColor = "#FA233E";
       //gauge.style.transition = `background 1s ease-in-out`;
     } else if (count <= 50) {
-      gauge.style.backgroundColor = "#ffbf00";
+      gauge.style.backgroundColor = "#FFA15C";
       //gauge.style.transition = `background 1s ease-in-out`;
     } else if (count < 75) {
       emoteImg.style.removeProperty("animation");
-      gauge.style.backgroundColor = "#90EE90";
+      gauge.style.backgroundColor = "#F5EB67";
       //gauge.style.transition = `background 1s ease-in-out`;
     } else {
-      gauge.style.backgroundColor = "#238823";
+      gauge.style.backgroundColor = "#44D492";
       //gauge.style.transition = `background 1s ease-in-out`;
     }
     gauge.style.transform = `rotate(${count / 2 / 100}turn)`;
