@@ -10,26 +10,19 @@ var step = 0,
 var timer = setInterval(loop, 100);
 
 function loop() {
-  //console.log(`${countElement.textContent}`);
   if (countElement.textContent >= 0) {
     count = countElement.textContent - 0.1;
     countElement.textContent = count;
     if (count < 0) {
       count = 0;
     } else if (count < 25) {
-      console.log("TEST1");
       gauge.style.backgroundColor = "#FA233E";
-      //gauge.style.transition = `background 1s ease-in-out`;
     } else if (count <= 50) {
       gauge.style.backgroundColor = "#FFA15C";
-      //gauge.style.transition = `background 1s ease-in-out`;
     } else if (count < 75) {
-      emoteImg.style.removeProperty("animation");
       gauge.style.backgroundColor = "#F5EB67";
-      //gauge.style.transition = `background 1s ease-in-out`;
     } else {
       gauge.style.backgroundColor = "#44D492";
-      //gauge.style.transition = `background 1s ease-in-out`;
     }
     gauge.style.transform = `rotate(${count / 2 / 100}turn)`;
     gauge.style.transition = `transform 0.2s ease-in-out`;
@@ -57,11 +50,107 @@ window.onload = () => {
   });
 
   client.on("message", (channel, tags, message, self) => {
-    console.log(message);
-    if (message.includes("KEKW")) {
+    if (
+      message.includes("KEKW") ||
+      message.includes("pepeLaugh") ||
+      message.includes("LUL") ||
+      message.includes("GOTTEM") ||
+      message.includes("LOLW") ||
+      message.includes("PepePoint") ||
+      message.includes("PepeLmao") ||
+      message.includes("ICANT") ||
+      message.includes("OMEGALUL") ||
+      message.includes("laff")
+    ) {
+      switch (true) {
+        case message.includes("KEKW"):
+          if (!emoteImg.src.includes("KEKW.png")) {
+            emoteImg.src = "./img/KEKW.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("pepeLaugh"):
+          if (!emoteImg.src.includes("pepeLaugh.png")) {
+            emoteImg.src = "./img/pepeLaugh.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("OMEGALUL"):
+          if (!emoteImg.src.includes("OMEGALUL.png")) {
+            emoteImg.src = "./img/OMEGALUL.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("GOTTEM"):
+          if (!emoteImg.src.includes("GOTTEM.png")) {
+            emoteImg.src = "./img/GOTTEM.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("LOLW"):
+          if (!emoteImg.src.includes("LOLW.png")) {
+            emoteImg.src = "./img/LOLW.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("PepePoint"):
+          if (!emoteImg.src.includes("pepePoint.png")) {
+            emoteImg.src = "./img/pepePoint.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("PepeLmao"):
+          if (!emoteImg.src.includes("PepeLmao.png")) {
+            emoteImg.src = "./img/PepeLmao.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("ICANT"):
+          if (!emoteImg.src.includes("ICANT.png")) {
+            emoteImg.src = "./img/ICANT.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("LUL"):
+          if (!emoteImg.src.includes("LUL.png")) {
+            emoteImg.src = "./img/LUL.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("laff"):
+          if (!emoteImg.src.includes("laff.png")) {
+            emoteImg.src = "./img/laff.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        default:
+      }
       count = parseInt(countElement.textContent) + 20;
       if (count > 100) {
-        emoteImg.style.animation = `rotate-scale-up 1s linear 2 both`;
+        emoteImg.classList.remove("bounce-7");
+        emoteImg.classList.remove("swing-in-top-fwd");
+        emoteImg.offsetWidth;
+        emoteImg.classList.add("bounce-7");
         count = 0;
       }
       countElement.innerHTML = count;
