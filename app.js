@@ -60,7 +60,8 @@ window.onload = () => {
       message.includes("PepeLmao") ||
       message.includes("ICANT") ||
       message.includes("OMEGALUL") ||
-      message.includes("laff")
+      message.includes("laff") ||
+      message.includes("xdd")
     ) {
       switch (true) {
         case message.includes("KEKW"):
@@ -82,6 +83,14 @@ window.onload = () => {
         case message.includes("OMEGALUL"):
           if (!emoteImg.src.includes("OMEGALUL.png")) {
             emoteImg.src = "./img/OMEGALUL.png";
+            emoteImg.classList.remove("swing-in-top-fwd");
+            emoteImg.offsetWidth;
+            emoteImg.classList.add("swing-in-top-fwd");
+          }
+          break;
+        case message.includes("xdd"):
+          if (!emoteImg.src.includes("xdd.png")) {
+            emoteImg.src = "./img/xdd.png";
             emoteImg.classList.remove("swing-in-top-fwd");
             emoteImg.offsetWidth;
             emoteImg.classList.add("swing-in-top-fwd");
