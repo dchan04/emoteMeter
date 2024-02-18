@@ -134,13 +134,13 @@ p {
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	text-transform: uppercase;
-	font-size: 75px;
+	font-size: 70px;
 	font-weight: 400;
 	letter-spacing: 0.1rem;
 	-webkit-text-stroke: 0.2vw white;
 
 	&:first-of-type {
-		font-size: 75px;
+		font-size: 70px;
 		-webkit-text-stroke: 0.1vw white;
 	}
 }

@@ -24,7 +24,6 @@ const emoteMap = new Map([
 	["KEKW", "KEKW.png"],
 	["xdd", "xdd.png"],
 	["LUL", "LUL.png"],
-	["om", "om.png"],
 ]);
 
 var step = 0,
