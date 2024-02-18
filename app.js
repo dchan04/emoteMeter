@@ -24,6 +24,7 @@ const emoteMap = new Map([
 	["KEKW", "KEKW.png"],
 	["xdd", "xdd.png"],
 	["LUL", "LUL.png"],
+	["om", "om.png"],
 ]);
 
 var step = 0,
@@ -74,8 +75,11 @@ window.onload = () => {
 	});
 
 	client.on("message", (channel, tags, message, self) => {
+		const wordsInMessage = message.trim().split(/\s+/); // Split the message into words
+
 		for (const [keyword, emoteFileName] of emoteMap) {
-			if (message.includes(keyword)) {
+			if (wordsInMessage.includes(keyword.trim())) {
+				// Check if any word in the message matches the keyword
 				const emotePath = emoteFileName
 					? `./img/${emoteFileName}`
 					: null;
@@ -95,7 +99,6 @@ window.onload = () => {
 						goalCount += 1;
 					}
 				}
-
 				break; // Stop checking once a matching keyword is found
 			}
 		}
