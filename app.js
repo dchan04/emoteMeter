@@ -22,6 +22,7 @@ const emoteMap = new Map([
 	["xdding", "xdding.png"],
 	["ICANT", "ICANT.png"],
 	["KEKW", "KEKW.png"],
+	["KEK", "KEK.png"],
 	["xdd", "xdd.png"],
 	["LUL", "LUL.png"],
 	["om", "om.png"],
